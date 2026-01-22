@@ -40,7 +40,7 @@ export const apiFetch = async (path: string, options: RequestInit = {}) => {
     }
 
     try {
-      const refreshRes = await fetch(`${BASE_URL}/auth/refresh`, {
+      const refreshRes = await fetch(`${BASE_URL}/auth?action=refresh`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refreshToken }),
